@@ -11,17 +11,28 @@ logger = logging.getLogger(__name__)
 
 def render():
     '''DISPLAY THE CURRENT LOCATION'''
-    print(game['rooms'][current][option])
-    print('Your options are...')
+    i = 1
+    print("Location: ", game['rooms'][current]['name'])
+    response = check_input()
+    if response == str(3):
+        for exit in game['rooms']['WHOUS']['exits']:
+            print(i, exit.get('verb'))
+            i = i + 1
+    elif response == str(2):
+        print("Description: ", game['rooms'][current]['desc'])
+    elif response== str(1):
+        print("Location: ", game['rooms'][current]['name'])
     return True
 
 def update():
     ''' UPDATE OUR LOCATION IF POSSIBLE, ETC.'''
+
     return True
 
 def check_input():
     '''GET USER INPUT'''
     response = input('What would you like to do? ')
+    
     return response
 
 #Put the zork.json information inside of a dictionary named game, so that I can pull the information out to use inside of the game
@@ -29,7 +40,7 @@ game = {}
 with open('zork.json') as json_file:
     game = json.load(json_file)
 current = 'WHOUS'       #Sets the current place in the world
-option = 'name'         #Sets the current option the player has chosen
+option = 'exits'         #Sets the current option the player has chosen
 def main():
     
     # Your game goes here!
@@ -40,9 +51,12 @@ def main():
     while not quit:
         
         #Render
+    
+        response = check_input()
+
         render()
         #Check player input
-        check_input()
+    
         #Update the status of the world
         update()
 
