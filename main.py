@@ -31,8 +31,9 @@ def update():
 
 def check_input():
     '''GET USER INPUT'''
+    global quit
     global response
-    response = input("Where would you like to go? ")  
+    response = input("Where would you like to go? ") 
     return response
 
 
@@ -69,3 +70,6 @@ if __name__ == '__main__':
 	main()
 
 
+##TO-DO
+# Implement a quit function
+# Implement an inventory function
