@@ -39,6 +39,14 @@
       {
         "v": "W",
         "map": "WEST"
+      },
+      {
+        "v": "CARS",
+        "map": "CARS"
+      },
+      {
+        "v": "INSIDE",
+        "map": "INSIDE"
       }
     ],
     "rooms": {
@@ -75,7 +83,7 @@
         "exits": [
           {
             "verb": "NORTH",
-            "target": "MCITY",
+            "target": "SCITY",
             "condition": ""
           },
           {
@@ -115,7 +123,7 @@
       },
       "EBUILD": {
         "name": "You are east of the remnants of a large building.",
-        "desc": "You are now looking at the east side of the building. the majority of the building on this side is still\r\n standing and you can decipher some graphics on the side of the building... it says \n\n\n     'Amazon - The World's Leader in Everything!'     \n\n\nBehind you there is a large cliff dropoff, making no exits except back where you came from.",
+        "desc": "You are now looking at the east side of the building. the majority of the building on this side is still\r\n standing and you can decipher some graphics on the side of the building... it says \n\n     'Amazon - The World's Leader in Everything!'     \n\nBehind you there is a large cliff dropoff, making no exits except back where you came from.",
         "exits": [
           {
             "verb": "WEST",
@@ -130,9 +138,109 @@
         "desc": "You walk down the street for about a mile until you end up at a gas station. There are broken down gas pumps, \r\na few charred and rusty cars and the building is collapsing in, and the windows are all shattered.",
         "exits": [
           {
+            "verb": "INSIDE",
+            "target": "GINSIDE",
+            "condition": ""
+          },
+          {
+            "verb": "CARS",
+            "target": "GCARS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SCITY": {
+        "name": "You are now in the south part of the city.",
+        "desc": "",
+        "exits": [
+          {
+            
+          }
+        ],
+        "inventory": []
+      },
+      "MCITY": {
+        "name": "You are now in the main part of the city.",
+        "desc": "",
+        "exits": [
+          {
 
           }
-        ]
+        ],
+        "inventory": []
+      },
+      "ECITY": {
+        "name": "You are now in the east part of the city.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "WCITY": {
+        "name": "You are now in the west part of the city.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "NCITY": {
+        "name": "You are now in the north part of the city.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "SUBWAY": {
+        "name": "You are now in the Subway of New York City.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "BRIDGE": {
+        "name": "You are now on the bridge over the Hudson.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "GINSIDE": {
+        "name": "You are now inside of the gas station.",
+        "desc": "",
+        "exits": [
+          {
+
+          }
+        ],
+        "inventory": []
+      },
+      "GCARS": {
+        "name": "You are around the cars in the gas station.",
+        "desc": "You walk over to the destroyed cars and search around, trying to see if you can find anything useful inside.",
+        "exits": [
+          {
+            "verb": "GAS",
+            "target": "GAS",
+            "condition": ""
+          }
+        ],
+        "inventory": ["Lighter","Tissues","Jerry Can","$5","Pack of Cigarettes"]
       }
     }
   }

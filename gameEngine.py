@@ -18,7 +18,7 @@ def render(game,current,moves,points):
     c = r[current]
 
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
-    print('\n\n {name}'.format(name=c['name']))
+    print('\n {name}'.format(name=c['name']))
     print(c['desc'])
     if len(c['inventory']):
         print('You see the following items:')

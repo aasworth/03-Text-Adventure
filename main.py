@@ -70,6 +70,6 @@ if __name__ == '__main__':
 	main()
 
 
-##TO-DO
+#TO-DO
 # Implement a quit function
 # Implement an inventory function
