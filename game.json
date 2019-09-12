@@ -1,0 +1,138 @@
+{
+    "verbs": [
+      {
+        "v": "EXITS",
+        "map": "EXITS"
+      },
+      {
+        "v": "QUIT",
+        "map": "QUIT"
+      },
+      {
+        "v": "NORTH",
+        "map": "NORTH"
+      },
+      {
+        "v": "N",
+        "map": "NORTH"
+      },
+      {
+        "v": "SOUTH",
+        "map": "SOUTH"
+      },
+      {
+        "v": "S",
+        "map": "SOUTH"
+      },
+      {
+        "v": "EAST",
+        "map": "EAST"
+      },
+      {
+        "v": "E",
+        "map": "EAST"
+      },
+      {
+        "v": "WEST",
+        "map": "WEST"
+      },
+      {
+        "v": "W",
+        "map": "WEST"
+      }
+    ],
+    "rooms": {
+      "WBUILD": {
+        "name": "You are west of the remnants a large building.",
+        "desc": "This building must have been destroyed in the war...You look around and see office chairs, filing cabinets, \r\ndesks, and other general supplies. This must have been a factory or office building...\n\n\nThe war of 2078 was the largest war in history, A nuclear war destroying half \r\nof the world. You are one of few survivors making it in this world, doing whatever you can to survive...",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "NBUILD",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SBUILD",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "GAS",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "EBUILD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "NBUILD": {
+        "name": "You are north of the remnants of a large building.",
+        "desc": "You are now looking at the north side of the building. over the horizon you see the ruined cityscape \r\nof New York City. ",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "MCITY",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "WBUILD",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SBUILD",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "EBUILD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SBUILD": {
+        "name": "You are south of the remnants of a large building.",
+        "desc": "You are now looking at the south side of the building. You can see an entrance to a subway further south, or a bridge leading over the Hudson to the east",
+        "exits": [
+          {
+            "verb": "SOUTH",
+            "target": "SUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "BRIDGE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "EBUILD": {
+        "name": "You are east of the remnants of a large building.",
+        "desc": "You are now looking at the east side of the building. the majority of the building on this side is still\r\n standing and you can decipher some graphics on the side of the building... it says \n\n\n     'Amazon - The World's Leader in Everything!'     \n\n\nBehind you there is a large cliff dropoff, making no exits except back where you came from.",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "WBUILD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "GAS": {
+        "name": "You are at a gas station down the street.",
+        "desc": "You walk down the street for about a mile until you end up at a gas station. There are broken down gas pumps, \r\na few charred and rusty cars and the building is collapsing in, and the windows are all shattered.",
+        "exits": [
+          {
+
+          }
+        ]
+      }
+    }
+  }
