@@ -49,8 +49,20 @@
         "map": "INSIDE"
       },
       {
+        "v": "I",
+        "map": "INSIDE"
+      },
+      {
         "v": "DOWN",
         "map": "DOWN"
+      },
+      {
+        "v": "D",
+        "map": "DOWN"
+      },
+      {
+        "v": "U",
+        "map": "UP"
       },
       {
         "v": "UP",
@@ -247,6 +259,45 @@
       },
       "ESUBWAY": {
         "name": "You are on the train tracks of the subway.",
+        "desc": "You decide to jump down onto the tracks in the subway station and look towards the east. You see a worn down sign \r\nand think you can make out 'Brooklyn'",
+        "exits": [
+          {
+            "verb": "EAST",
+            "target": "BROOKLYNS",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "SUBWAY",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BROOKLYNS": {
+        "name": "You are now in a brooklyn subway station.",
+        "desc": "",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "MBROOKLYN",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "ESUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "STATENISLANDS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "MBROOKLYN": {
+        "name": "You are now outside in the center of Brooklyn.",
         "desc": "",
         "exits": [
           {
@@ -254,11 +305,38 @@
             "target": "",
             "condition": ""
           }
+        ]
+      },
+      "STATENISLANDS": {
+        "name": "You are now in a Staten Island subway station.",
+        "desc": "",
+        "exits": [
+          {
+            "verb": "",
+            "target": "",
+            "condition": ""
+          }
+        ]
+      },
+      "WSUBWAY": {
+        "name": "You are on the train tracks of the subway.",
+        "desc": "You decide to jump down onto the tracks in the subway station and look towards the east. You see a worn down sign \r\nand think you can make out 'Hempstead'",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "HEMPSTEADS",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "SUBWAY",
+            "condition": ""
+          }
         ],
         "inventory": []
       },
-      "WSUBWAY": {
-        "name": "You are on the train tracks of the subway",
+      "HEMPSTEADS": {
+        "name": "You are now in a Hempstead subway station.",
         "desc": "",
         "exits": [
           {

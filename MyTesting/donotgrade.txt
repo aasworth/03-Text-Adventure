@@ -1,0 +1,4 @@
+Hello! This folder I made to store my other files that I am not submitting for grading, it is just for me to mess around and 
+see if I can achieve the same goal of the assignment with my own code. 
+Thank you very much!
+-Aaron
