@@ -20,6 +20,7 @@ def render(game,current,moves,points):
     print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
     print('\n {name}'.format(name=c['name']))
     print(c['desc'])
+    printExits(game, current)
     if len(c['inventory']):
         print('You see the following items:')
         for i in c['inventory']:

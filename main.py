@@ -1,75 +1,120 @@
-import sys, logging, json
+#!/usr/bin/env python3
 
-#check to make sure we are running the right version of Python
+import sys, logging, os, json
+
 version = (3,7)
 assert sys.version_info >= version, "This script requires at least Python {0}.{1}".format(version[0],version[1])
 
-#turn on logging, in case we have to leave ourselves debugging messages
-logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.DEBUG)
+logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def render():
-    '''DISPLAY THE CURRENT LOCATION'''
-    print("\n",game['rooms'][current]['name'])
-    if game['rooms'][current]['desc']:
-        print(game['rooms'][current]['desc'])
-    for exit in game['rooms'][current]['exits']:
-        print(exit.get('verb')) 
-    return True
 
-def update():
-    ''' UPDATE OUR LOCATION IF POSSIBLE, ETC.'''
-    global current
-    for exit in game['rooms'][current]['exits']:
-        if response == exit.get('verb'):
-            if exit.get('target') == 'NoExit':
-                print("Sorry, That is not an option. Please select another option.")
-            elif exit.get('target') != 'NoExit':
-                current = exit.get('target')
+
+# Game loop functions
+def render(game,current,moves,points):
+    ''' Displays the current room, moves, and points '''
+    r = game['rooms']
+    c = r[current]
+
+    print('\n\nMoves: {moves}, Points: {points}'.format(moves=moves, points=points))
+    print('\n {name}'.format(name=c['name']))
+    print(c['desc'])
+    printExits(game, current)
+    if len(c['inventory']):
+        print('You see the following items:')
+        for i in c['inventory']:
+            print('\t{i}'.format(i=i))
+
+def getInput(game,current,verbs):
+    ''' Asks the user for input and normalizes the inputted value. Returns a list of commands '''
+
+    toReturn = input('\nWhat would you like to do? ').strip().upper().split()
+    if (len(toReturn)):
+        #assume the first word is the verb
+        toReturn[0] = normalizeVerb(toReturn[0],verbs)
+    return toReturn
+
+
+def update(selection,game,current,inventory):
+    ''' Process the input and update the state of the world '''
+    s = list(selection)[0]  #We assume the verb is the first thing typed
+    if s == "":
+        print("\nSorry, I don't understand.")
+        return current
+    elif s == 'EXITS':
+        printExits(game,current)
+        return current
+    else:
+        for e in game['rooms'][current]['exits']:
+            if s == e['verb'] and e['target'] != 'NoExit':
+                return e['target']
+    print("\nYou can't go that way!")
     return current
 
-def check_input():
-    '''GET USER INPUT'''
-    global quit
-    global response
-    response = input("Where would you like to go? ") 
-    return response
+
+# Helper functions
+
+def printExits(game,current):
+    e = ", ".join(str(x['verb']) for x in game['rooms'][current]['exits'])
+    print('\nYou can go the following directions: {directions}'.format(directions = e))
+
+def normalizeVerb(selection,verbs):
+    for v in verbs:
+        if selection == v['v']:
+            return v['map']
+    return ""
+
+def end_game(winning,points,moves):
+    if winning:
+        print('You have won! Congratulations')
+        print('You scored {points} points in {moves} moves! Nicely done!'.format(moves=moves, points=points))
+    else:
+        print('Thanks for playing!')
+        print('You scored {points} points in {moves} moves. See you next time!'.format(moves=moves, points=points))
 
 
-game = {}
-with open('zork.json') as json_file:        #Put the zork.json information inside of a dictionary named game, so that I can pull the information out to use inside of the game
-    game = json.load(json_file)
-current = 'WHOUS'    #Sets the current place in the world
-option = 'exits'    #Sets the current option the player has chosen
-response = ''
+
+
+
 def main():
-    
-    
-    # Your game goes here!
-        # Here will add code to make the game! give player options, choices, and things to do.
+    gameFile = 'game.json'
 
-    quit = False
+    game = {}
+    with open(gameFile) as json_file:
+        game = json.load(json_file)
 
-    while not quit:
-        
-        #Render
-        render()
-        #Check player input
-        check_input()
-        #Update the status of the world
-        update()
+    current = 'WBUILD'
+    win = ['END']
+    lose = []
+    moves = 0
+    points = 0
+    inventory = []
+
+    while True:
+
+        render(game,current,moves,points)
+
+        selection = getInput(game,current,game['verbs'])
+
+        if selection[0] == 'QUIT':
+            end_game(False,points,moves)
+            break
+
+        current = update(selection,game,current,inventory)
+
+        if current in win:
+            end_game(True,points,moves)
+            break
+        if current in lose:
+            end_game(False,points,moves)
+            break
+
+        moves += 1
 
 
-    return True
 
 
 
-#if we are running this from the command line, run main
 if __name__ == '__main__':
 	main()
-
-
-#TO-DO
-# Implement a quit function
-# Implement an inventory function

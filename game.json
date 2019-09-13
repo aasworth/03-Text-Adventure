@@ -47,12 +47,20 @@
       {
         "v": "INSIDE",
         "map": "INSIDE"
+      },
+      {
+        "v": "DOWN",
+        "map": "DOWN"
+      },
+      {
+        "v": "UP",
+        "map": "UP"
       }
     ],
     "rooms": {
       "WBUILD": {
         "name": "You are west of the remnants a large building.",
-        "desc": "This building must have been destroyed in the war...You look around and see office chairs, filing cabinets, \r\ndesks, and other general supplies. This must have been a factory or office building...\n\n\nThe war of 2078 was the largest war in history, A nuclear war destroying half \r\nof the world. You are one of few survivors making it in this world, doing whatever you can to survive...",
+        "desc": "This building must have been destroyed in the war...You look around and see office chairs, filing cabinets, \r\ndesks, and other general supplies. This must have been a factory or office building...\n\nThe war of 2078 was the largest war in history, A nuclear war destroying half \r\nof the world. You are one of few survivors making it in this world, doing whatever you can to survive...",
         "exits": [
           {
             "verb": "NORTH",
@@ -146,6 +154,11 @@
             "verb": "CARS",
             "target": "GCARS",
             "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WBUILD",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -155,7 +168,9 @@
         "desc": "",
         "exits": [
           {
-            
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -165,7 +180,9 @@
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -175,7 +192,9 @@
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -185,7 +204,9 @@
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -195,17 +216,55 @@
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
       },
       "SUBWAY": {
         "name": "You are now in the Subway of New York City.",
+        "desc": "You walk down the steps leading into the subway. Newspapers are everywhere, and you see tattered clothes laying around where it looks like \r\nsomeone has been sleeping. You don't see anyone around, but a stray dog sees you, barks, and runs off down the subway. The tracks seem to be clear in both directions...",
+        "exits": [
+          {
+            "verb": "EAST",
+            "target": "ESUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "WSUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "SBUILD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "ESUBWAY": {
+        "name": "You are on the train tracks of the subway.",
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "WSUBWAY": {
+        "name": "You are on the train tracks of the subway",
+        "desc": "",
+        "exits": [
+          {
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -215,32 +274,87 @@
         "desc": "",
         "exits": [
           {
-
+            "verb": "",
+            "target": "",
+            "condition": ""
           }
         ],
         "inventory": []
       },
       "GINSIDE": {
         "name": "You are now inside of the gas station.",
-        "desc": "",
+        "desc": "You walk over and pull down a piece of cardboard that is hanging off of the door, and walk inside. The place is a disaster, \r\nand it looks like it has already been ransacked. Some rats scurry around at your feet, and even though you are disgusted, you start to look for anything useful to you.",
         "exits": [
           {
-
+            "verb": "WEST",
+            "target": "GAS",
+            "condition":""
+          },
+          {
+            "verb": "DOWN",
+            "target": "GCELLAR",
+            "condition": ""
           }
         ],
-        "inventory": []
+        "inventory": ["Bag of chips","$7.50","Cigarettes","Toilet Paper","Water Bottles"]
       },
       "GCARS": {
         "name": "You are around the cars in the gas station.",
-        "desc": "You walk over to the destroyed cars and search around, trying to see if you can find anything useful inside.",
+        "desc": "You walk over to the destroyed cars and search around, trying to see if you can find anything useful.",
         "exits": [
           {
-            "verb": "GAS",
+            "verb": "EAST",
             "target": "GAS",
             "condition": ""
           }
         ],
         "inventory": ["Lighter","Tissues","Jerry Can","$5","Pack of Cigarettes"]
+      },
+      "GCELLAR": {
+        "name": "You are now in the cellar of the gas station. It is kind of dark in here, but you think you can see a chest sitting in the corner of the room...",
+        "desc": "",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "GCRATS",
+            "condition": ""
+          },
+          {
+            "verb": "UP",
+            "target": "GINSIDE",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "GCRATS": {
+        "name": "Woah!",
+        "desc": "As you are walking towards the chest, you step on something and you hear it squeal! A large rat goes running away into the darkness. \r\nYou can keep going towards the chest, or decide it's too scary and turn around to go back.",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "GCHEST",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "GCELLAR",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "GCHEST": {
+        "name": "You open the chest in the corner of the cellar.",
+        "desc": "TREASURE! Inside the chest you find items that will help you survive so much!",
+        "exits": [
+          {
+            "verb": "SOUTH",
+            "target": "GCELLAR",
+            "condition": ""
+          }
+        ],
+        "inventory": ["3 cans of ravioli","5 water bottles","bottle of advil","$25","Dog Treats","Newspaper from before the war"]
       }
     }
   }
