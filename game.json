@@ -309,11 +309,16 @@
       },
       "STATENISLANDS": {
         "name": "You are now in a Staten Island subway station.",
-        "desc": "",
+        "desc": "Inside the subway station you look around and see that there is a ton of school desks blocking the stairs up to the street. \r\nThere is no exit, except for how you came here.",
         "exits": [
           {
-            "verb": "EAST",
+            "verb": "UP",
             "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "BROOKLYNS",
             "condition": ""
           }
         ]
@@ -337,11 +342,16 @@
       },
       "HEMPSTEADS": {
         "name": "You are now in a Hempstead subway station.",
-        "desc": "",
+        "desc": "Inside the subway station you look around and see that there is a ton of school desks blocking the stairs up to the street. \r\nThere is no exit, except for how you came here.",
         "exits": [
           {
-            "verb": "EAST",
+            "verb": "UP",
             "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WSUBWAY",
             "condition": ""
           }
         ],
