@@ -177,11 +177,11 @@
       },
       "SCITY": {
         "name": "You are now in the south part of the city.",
-        "desc": "",
+        "desc": "You walk for a few miles from the building until you reach some suburbs in the southern part of the City.",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -192,8 +192,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -204,8 +204,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -216,8 +216,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -228,8 +228,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -301,8 +301,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ]
@@ -312,8 +312,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ]
@@ -340,8 +340,8 @@
         "desc": "",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "EAST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -349,15 +349,15 @@
       },
       "BRIDGE": {
         "name": "You are now on the bridge over the Hudson.",
-        "desc": "",
+        "desc": "You walk to the bridge, and when you reach the peak of the curve, you look down and see a blockade at the bottom. \r\nIt looks like a group of people have made a blockade to try to trap people and steal all of their belongings. You decide to play it safe and turn around and go back.",
         "exits": [
           {
-            "verb": "",
-            "target": "",
+            "verb": "WEST",
+            "target": "SBUILD",
             "condition": ""
           }
         ],
-        "inventory": []
+        "inventory": ["Empty cans", "Newspapers", "Bones"]
       },
       "GINSIDE": {
         "name": "You are now inside of the gas station.",
