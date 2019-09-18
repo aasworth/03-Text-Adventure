@@ -67,6 +67,14 @@
       {
         "v": "UP",
         "map": "UP"
+      },
+      {
+        "v": "T",
+        "map": "TAKE"
+      },
+      {
+        "V": "TAKE",
+        "map": "TAKE"
       }
     ],
     "rooms": {

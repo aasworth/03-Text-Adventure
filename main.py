@@ -45,6 +45,12 @@ def update(selection,game,current,inventory):
     elif s == 'EXITS':
         printExits(game,current)
         return current
+    elif s == 't':
+        for i in game['rooms'][current]['inventory']:
+            if selection[4:] == i:
+                inventory = i
+            else:
+                print("\nSorry, this room doesn't contain that item.")
     else:
         for e in game['rooms'][current]['exits']:
             if s == e['verb'] and e['target'] != 'NoExit':
