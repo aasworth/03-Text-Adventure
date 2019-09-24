@@ -15,6 +15,7 @@ What is something you saw in your peer's project that you would like to apply to
 
 What suggestions would you have for your peer to improve his/her code?
 * the game file itself works great, but the .json file might need double checking, as the "you can go the following directions" in one part of the map didn't work properly.
+* since the .json file says "NoExit" for east on "SCITY" i am unsure where the player should be able to go from there. 
 
  
 
