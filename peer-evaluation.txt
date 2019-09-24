@@ -1,0 +1,39 @@
+Name: Rachel Gentry
+Date: 09/23/19
+Project: 03 Text Adventure
+Peer's repository: https://github.com/aasworth/03-Text-Adventure.git
+
+
+
+What is something you learned by reviewing your peer's project?
+* i saw that they actually used the inventory system, and that was something i didn't really figure out for my own. it was helpful to see it in practice.
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+* i liked that they used more verbs in their .json file, besides just directional ones. i would like to apply this to my next project.
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+* the game file itself works great, but the .json file might need double checking, as the "you can go the following directions" in one part of the map didn't work properly.
+
+ 
+
+What could have been clearer or better commented?
+* i think having an explanation which python file should be used would be helpful. they don't look much different, but i'm still unsure which to use.
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+* there is both a gameEngine.py and a main.py and i wasn't sure which should be used.
+ 
+
+Does the repository contain an appropriate LICENSE?
+* yes
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+* it would have been cool to learn about the player character/how they ended up there, but it doesn't detract from anything by not having that. 
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+* i had a lot of fun! you did an excellent job with world building, and it was interesting to explore.
+
