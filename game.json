@@ -145,6 +145,16 @@
             "verb": "EAST",
             "target": "BRIDGE",
             "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -157,7 +167,22 @@
             "verb": "WEST",
             "target": "WBUILD",
             "condition": ""
-          }
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+          "verb": "SOUTH",
+          "target": "NoExit",
+          "condition": ""
+        },
+        {
+          "verb": "NORTH",
+          "target": "NoExit",
+          "condition": ""
+        }
         ],
         "inventory": []
       },
@@ -191,6 +216,21 @@
             "verb": "EAST",
             "target": "NoExit",
             "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NBUILD",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+          "verb": "NORTH",
+          "target": "NoExit",
+          "condition": ""
           }
         ],
         "inventory": []
@@ -201,7 +241,22 @@
         "exits": [
           {
             "verb": "EAST",
-            "target": "NoExit",
+            "target": "ECITY",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SCITY",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NCITY",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "WCITY",
             "condition": ""
           }
         ],
@@ -215,7 +270,22 @@
             "verb": "EAST",
             "target": "NoExit",
             "condition": ""
-          }
+          },
+          {
+            "verb": "WEST",
+            "target": "MCITY",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+          "verb": "NORTH",
+          "target": "NoExit",
+          "condition": ""
+        }
         ],
         "inventory": []
       },
@@ -224,10 +294,25 @@
         "desc": "",
         "exits": [
           {
-            "verb": "EAST",
+            "verb": "WEST",
             "target": "NoExit",
             "condition": ""
-          }
+          },
+          {
+            "verb": "EAST",
+            "target": "MCITY",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+          "verb": "NORTH",
+          "target": "NoExit",
+          "condition": ""
+        }
         ],
         "inventory": []
       },
@@ -236,10 +321,25 @@
         "desc": "",
         "exits": [
           {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "MCITY",
+            "condition": ""
+          },
+          {
             "verb": "EAST",
             "target": "NoExit",
             "condition": ""
-          }
+          },
+          {
+          "verb": "WEST",
+          "target": "NoExit",
+          "condition": ""
+        }
         ],
         "inventory": []
       },
@@ -261,6 +361,11 @@
             "verb": "NORTH",
             "target": "SBUILD",
             "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -277,6 +382,16 @@
           {
             "verb": "WEST",
             "target": "SUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
             "condition": ""
           }
         ],
@@ -300,6 +415,11 @@
             "verb": "EAST",
             "target": "STATENISLANDS",
             "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
           }
         ],
         "inventory": []
@@ -309,8 +429,23 @@
         "desc": "",
         "exits": [
           {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
             "verb": "EAST",
             "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "BROOKLYNS",
             "condition": ""
           }
         ]
@@ -328,6 +463,21 @@
             "verb": "WEST",
             "target": "BROOKLYNS",
             "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
           }
         ]
       },
@@ -343,6 +493,16 @@
           {
             "verb": "EAST",
             "target": "SUBWAY",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
             "condition": ""
           }
         ],
